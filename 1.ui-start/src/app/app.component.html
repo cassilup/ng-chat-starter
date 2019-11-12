@@ -1,7 +1,26 @@
 <div class="nav">
-  <a href="#" class="active-link">Login</a>
-  <a href="#">Home</a>
+  <a routerLink="login" routerLinkActive="active-link">Login</a>
+  <a routerLink="home" routerLinkActive="active-link">Home</a>
 </div>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- <div *ngIf="false" [class]="0.1+0.2">this appears only if truthy</div>
 
@@ -12,8 +31,7 @@
 <!-- <pre>{{dummyJson | json}}</pre>
 {{add(1,2)}} -->
 
-<app-login [outsideData]="dummyJson"></app-login>
+<!-- <app-login [outsideData]="dummyJson"></app-login> -->
 <!-- <app-home></app-home> -->
-
 
 <!-- <button (click)="changeDummyJson()">Click Me!</button> -->

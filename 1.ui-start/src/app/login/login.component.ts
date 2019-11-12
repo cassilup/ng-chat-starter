@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  @Input() outsideData;
+  // @Input() outsideData;
 
   loginForm = new FormGroup({
     username: new FormControl('', Validators.required),
@@ -15,10 +15,5 @@ export class LoginComponent {
   })
 
   doLogin = function() {
-    if(this.loginForm.value.password !== "pass") {
-      this.error = "password is invalid";
-    } else {
-      this.error = "";
-    }
   }
 }

@@ -6,6 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { ChatService } from './shared/chat.service';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
+];
 
 @NgModule({
   declarations: [
@@ -15,7 +22,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(
+      routes
+    )
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]
