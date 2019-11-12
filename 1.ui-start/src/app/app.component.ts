@@ -27,11 +27,15 @@ export class AppComponent {
 
   shortAdd = (a,b) => a+b;
 
-  dummyJson = {
+  dummyJson: any = {
     a: 1,
     b: 2,
     somethingElse: [
       "a", "b", "c"
     ]
+  }
+
+  changeDummyJson() {
+    this.dummyJson = "something else";
   }
 }
