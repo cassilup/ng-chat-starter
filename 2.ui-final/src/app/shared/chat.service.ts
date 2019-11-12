@@ -10,6 +10,7 @@ export class ChatService {
   private url = "http://localhost:3000";
   private socket;
   private messages:Message[] = [];
+  private connection;
 
   constructor() {
     this.socket = io(this.url);
